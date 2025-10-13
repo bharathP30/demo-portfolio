@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>My Portfolio</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header>
+        <h2 class="text-violet-300 text-2xl p-2">Bharath Patnaikuni</h2>
+        <button id="menu" class="px-2 py-1.5 text-sm sm:hidden rounded-lg">☰</button>
+    </header>
+
+    <nav>
+        <ul id="list" class="hidden text-lg sm:flex text-blue-200 gap-4">
+            <li><a class="hover:text-blue-400 hover:underline" href="#">Main</a></li>
+            <li><a class="hover:text-blue-400 hover:underline" href="#">About</a></li>
+            <li><a class="hover:text-blue-400 hover:underline" href="#">Skills</a></li>
+            <li><a class="hover:text-blue-400 hover:underline" href="#">Projects</a></li>
+             <li><a class="hover:text-blue-400 hover:underline" href="#">Contact</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <img style="border-radius: 200px; max-width: 250px; width: 100%; height: auto;" src="Gohan.jpg" alt="Gohan">
+        <div class="info">
+            <span>Hello, It's me,</span>
+            <span class="name" style="font-size: 38px;">Bharath</span>
+            <p><em>I build like a ghost. Quiet. Powerful. Unstoppable.</em></p>
+            <div class="buttonfile">
+                <a class="button" href="#">See my works</a>
+            </div>
+        </div>
+    </main>
+
+    <article class="about">
+        <h3>About me</h3>
+        <p class="type reveal">I’m Bharath. I code to survive. I design to win.</p>
+        <table class="Qualification">
+            <thead>
+                <tr>
+                    <td>S/no</td> <td>Qualification</td><td>Year</td>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>1</td> <td>10th just pass</td> <td>2020</td>
+                </tr>
+                <tr>
+                    <td>2</td> <td>12th fail</td> <td>2024</td>
+                </tr>
+            </tbody>
+        </table>
+    </article>
+
+         <h3 class="tag"><em>Skills :</em></h3>
+    <article class="skills">
+        <div style="animation-delay: 0s;" class="card reveal">
+            <div class="subcard"><h3>HTML</h3>
+            <span>Simple page structure</span>
+            </div>
+        </div>
+        <div style="animation-delay: 0.4s;" class="card reveal">
+            <div class="subcard"><h3>CSS</h3>
+            <span>Simple page styling</span>
+            </div>
+        </div>
+        <div style="animation-delay: 0.8s;" class="card reveal">
+            <div class="subcard"><h3>Media queries</h3>
+            <span>Responsive pages</span>
+            </div>
+        </div>
+        <div style="animation-delay: 1.2s;" class="card reveal">
+            <div class="subcard"><h3>Component styling</h3>
+            <span>Re-usable buttons</span>
+            </div>
+        </div>
+        <div style="animation-delay: 1.6s;" class="card reveal">
+            <div class="subcard"><h3>Scroll animations</h3>
+            <span>Nice viusals</span>
+            </div>
+        </div>
+        <div style="animation-delay: 2s;" class="card reveal">
+            <div class="subcard"><h3>Form input control</h3>
+            <span>Will use more in Backend</span>
+            </div>
+        </div>
+    </article>
+    
+        <h3 class="tag"><em>Projects :</em></h3>
+    <article class="projects">
+             <div style="animation-delay: 0s;" class="card reveal">
+            <div class="subcard">
+                <img src="Gohan.jpg" alt="Gohan">
+                <h3>Pricing section</h3>
+                <span>Styled cards</span>
+                <button class="button view">View</button>
+            </div>
+        </div>
+        <div style="animation-delay: 0.4s;" class="card reveal">
+            <div class="subcard">
+                <img src="Gohan.jpg" alt="Gohan">
+                <h3>Landing page</h3>
+                <span>Mobile first site</span>
+                <button class="button view">View</button>
+            </div>
+        </div>
+        <div style="animation-delay: 0.8s;" class="card reveal">
+            <div class="subcard">
+                <img src="Gohan.jpg" alt="Gohan">
+                <h3>Contact form</h3>
+                <span>With background image</span>
+                <button class="button view">View</button>
+            </div>
+        </div>
+    </article>
+
+    <div class="contact">
+             <form action="/submit" method="post" class="form">
+                <label>Name : <input type="text" name="name" id="name" placeholder="Enter name" required> </label>
+                <label>From : <input type="email" name="email" id="email1" placeholder="Enter your email" required></label>
+                <label>TO : <input type="email" name="email" id="email2" placeholder="xyz@gmail.com" required></label>
+                <label>Message : <textarea name="msg" id="msg" placeholder="say something"></textarea></label>
+                <input class="submit" type="submit" name="send" id="send">
+            </form>
+            <div>
+                <a class="link" href="#">Instagram</a>
+                <a class="link" href="#">Twitter</a>
+                <a class="link" href="#">LinkedIn</a>
+            </div>
+        </div>
+
+    <footer>
+        <div class="foot">
+            <p>@2025 Bharath Patnaikuni | all rights reserved</p>
+        </div>
+    </footer>
+
+     <script>
+        const ulist = document.querySelector("#list");
+        const btn = document.querySelector("#menu");
+
+        btn.addEventListener("click", ()=>{
+            ulist.classList.toggle('hidden');
+            ulist.classList.toggle('flex-col');
+            ulist.classList.toggle('gap-3');
+            ulist.classList.toggle('text-lg');
+        });
+
+    const reveals = document.querySelectorAll(".reveal");
+
+    window.addEventListener("scroll", () => {
+      for (let i = 0; i < reveals.length; i++) {
+        const windowHeight = window.innerHeight;
+        const revealTop = reveals[i].getBoundingClientRect().top;
+        const revealPoint = 150;
+
+        if (revealTop < windowHeight - revealPoint) {
+          reveals[i].classList.add("active");
+        }
+      }
+    });
+  </script>
+</body>
+</html>
