@@ -117,7 +117,7 @@
     </article>
 
     <div class="contact">
-             <form action="/submit" method="post" class="form">
+             <form onsubmit="event.preventDefault()" class="form">
                 <label>Name : <input type="text" name="name" id="name" placeholder="Enter name" required> </label>
                 <label>From : <input type="email" name="email" id="email1" placeholder="Enter your email" required></label>
                 <label>TO : <input type="email" name="email" id="email2" placeholder="xyz@gmail.com" required></label>
