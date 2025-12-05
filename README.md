@@ -13,9 +13,10 @@ This is a responsive and visually engaging personal demo portfolio website to sh
 ## Technologies Used
 
 - HTML5 for semantic structure
-- CSS3 including Grid, Flexbox, and media queries for responsive layout
+- Tailwind CSS for Mobile-first design
 - JavaScript for navigation interactivity and any dynamic behavior
 - Optional animations and transitions for enhanced UX
+- Optional CSS3 including Grid, Flexbox, and media queries for responsive layout
 
 ## How to Use
 
